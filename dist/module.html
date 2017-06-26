@@ -1,0 +1,30 @@
+<div class="table-panel-container">
+    <div class="ajax-panel" ng-style="{height: ctrl.height}">
+        <div class="ajax-panel-body" ng-init="ctrl.content">
+            <table class="table-panel-table">
+                <thead>
+                    <tr>
+                        <th ng-repeat="col in ['工单号','设备信息', '地点', '部门', '位置', '工单描述','工单状态']">
+                            <div class="table-panel-table-header-inner">
+                                {{col}}
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat='item in ctrl.content'>
+                        <td>{{item.bo.Fields[0].Value}}</td>
+                        <td>{{item.bo.Fields[2].Value}}</td>
+                        <td>{{item.bo.Fields[3].Value}}</td>
+                        <td>{{item.bo.Fields[4].Value}}</td>
+                        <td>{{item.bo.Fields[5].Value}}</td>
+                        <td>{{item.bo.Fields[6].Value}}</td>
+                        <td>{{item.bo.Fields[7].Value[0]}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="table-panel-footer" id="table-page">
+</div>
